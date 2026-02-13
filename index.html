@@ -709,15 +709,15 @@
         });
 
         // Sticky CTA on Mobile
-        let lastScrollTop = 0;
         const stickyCta = document.getElementById('stickyCta');
         const heroSection = document.querySelector('.hero');
         
         window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
             // Only show on mobile devices
             if (window.innerWidth < 768) {
                 const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 
                 // Show sticky CTA when scrolled past hero section
                 if (scrollTop > heroBottom) {
@@ -726,8 +726,6 @@
                     stickyCta.classList.remove('show');
                 }
             }
-            
-            lastScrollTop = scrollTop;
         });
 
         // Performance: Preload critical resources
