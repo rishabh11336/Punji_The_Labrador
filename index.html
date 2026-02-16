@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- SEO Meta Tags -->
     <title>Premium Dog Products - Punji's Favorites | Amazon Affiliate</title>
-    <meta name="description" content="Discover Punji the Labrador's favorite dog products! Curated selection of premium toys, treats, accessories, and more. Shop now with special deals!">
-    <meta name="keywords" content="dog products, labrador toys, dog treats, pet accessories, dog supplies, amazon dog products">
+    <meta name="description"
+        content="Discover Punji the Labrador's favorite dog products! Curated selection of premium toys, treats, accessories, and more. Shop now with special deals!">
+    <meta name="keywords"
+        content="dog products, labrador toys, dog treats, pet accessories, dog supplies, amazon dog products">
     <meta name="author" content="Punji The Labrador">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Premium Dog Products - Punji's Favorites">
-    <meta property="og:description" content="Discover Punji the Labrador's favorite dog products! Curated selection of premium toys, treats, accessories, and more.">
+    <meta property="og:description"
+        content="Discover Punji the Labrador's favorite dog products! Curated selection of premium toys, treats, accessories, and more.">
     <meta property="og:url" content="https://www.youtube.com/@punji_the_labrador">
     <meta property="og:site_name" content="Punji The Labrador">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -35,7 +42,7 @@
                     <span class="logo-icon">🐕</span>
                     <span class="logo-text">Punji's Picks</span>
                 </a>
-                
+
                 <div class="nav-actions">
                     <a href="https://www.youtube.com/@punji_the_labrador" target="_blank" class="nav-link">
                         <span class="icon">📺</span>
@@ -52,19 +59,15 @@
             <div class="hero-content">
                 <div class="hero-badge">🏆 Recommended by Punji</div>
                 <h1 class="hero-title">Premium Dog Products</h1>
-                <p class="hero-subtitle">Curated collection of the best toys, treats, and accessories for your furry friend</p>
-                
+                <p class="hero-subtitle">Curated collection of the best toys, treats, and accessories for your furry
+                    friend</p>
+
                 <!-- Search Bar -->
                 <div class="search-bar">
                     <div class="search-input-wrapper">
                         <span class="search-icon">🔍</span>
-                        <input 
-                            type="text" 
-                            id="searchInput" 
-                            class="search-input" 
-                            placeholder="Search for products..."
-                            aria-label="Search products"
-                        >
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search for products..."
+                            aria-label="Search products">
                     </div>
                 </div>
             </div>
@@ -98,7 +101,7 @@
                         Accessories
                     </button>
                 </div>
-                
+
                 <div class="sort-wrapper">
                     <select id="sortSelect" class="sort-select" aria-label="Sort products">
                         <option value="featured">Featured</option>
@@ -114,10 +117,24 @@
     <!-- Products Grid -->
     <main class="products-section">
         <div class="container">
-            <div id="productsGrid" class="products-grid">
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state" style="display: block;">
+                <div class="loading-spinner"></div>
+                <p>Loading Punji's favorite products...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="errorState" class="error-state" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <h3>Unable to Load Products</h3>
+                <p>We're having trouble connecting to our product database.</p>
+                <button id="retryBtn" class="retry-btn">Try Again</button>
+            </div>
+
+            <div id="productsGrid" class="products-grid" style="display: none;">
                 <!-- Products will be dynamically inserted here -->
             </div>
-            
+
             <!-- No Results Message -->
             <div id="noResults" class="no-results" style="display: none;">
                 <div class="no-results-icon">🔍</div>
@@ -157,7 +174,12 @@
     <aside class="disclaimer">
         <div class="container">
             <div class="disclaimer-content">
-                <strong>Amazon Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. This means that if you click on one of our affiliate links and make a purchase, we may receive a small commission at no extra cost to you. This helps support Punji The Labrador YouTube channel and allows us to continue providing valuable content. We only recommend products that we genuinely believe will benefit you and your furry friend. Product prices and availability are accurate as of the date/time indicated and are subject to change. Thank you for your support!
+                <strong>Amazon Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases.
+                This means that if you click on one of our affiliate links and make a purchase, we may receive a small
+                commission at no extra cost to you. This helps support Punji The Labrador YouTube channel and allows us
+                to continue providing valuable content. We only recommend products that we genuinely believe will
+                benefit you and your furry friend. Product prices and availability are accurate as of the date/time
+                indicated and are subject to change. Thank you for your support!
             </div>
         </div>
     </aside>
@@ -168,7 +190,7 @@
             <div class="footer-content">
                 <p>&copy; 2026 Punji The Labrador. All rights reserved.</p>
                 <p>
-                    Follow us on 
+                    Follow us on
                     <a href="https://www.youtube.com/@punji_the_labrador" target="_blank" rel="noopener noreferrer">
                         YouTube @punji_the_labrador
                     </a>
@@ -184,4 +206,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
