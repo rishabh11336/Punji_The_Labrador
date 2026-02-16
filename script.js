@@ -158,8 +158,8 @@ function createProductCard(product, index) {
             
             <div class="product-footer">
                 <div class="product-price">
-                    <div class="price-current">$${product.price}</div>
-                    ${product.originalPrice ? `<div class="price-original">$${product.originalPrice}</div>` : ''}
+                    <div class="price-current">₹${product.price}</div>
+                    ${product.originalPrice ? `<div class="price-original">₹${product.originalPrice}</div>` : ''}
                 </div>
                 <a 
                     href="${product.affiliateLink}" 
